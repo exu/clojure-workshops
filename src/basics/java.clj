@@ -15,6 +15,8 @@
 
 (.toUpperCase "fred")
 
+
+
 (System/getProperty "java.vm.version")
 
 Math/PI

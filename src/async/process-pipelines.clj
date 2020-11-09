@@ -1,3 +1,4 @@
+;; Escape Callback Hell with Process Pipelines
 (ns playsync.core
   (:require [clojure.core.async
              :as a
@@ -5,7 +6,8 @@
                      alts! alts!! timeout]]))
 
 
-;; Escape Callback Hell with Process Pipelines
+;; processes each has in chan and returns out channel
+
 (defn upper-caser
   [in]
   (let [out (chan)]
@@ -26,6 +28,9 @@
 (defn printer
   [in]
   (go (while true (println (<! in)))))
+
+
+;; and run them
 
 (let [in-chan (chan)
       upper-caser-out (upper-caser in-chan)
