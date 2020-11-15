@@ -114,15 +114,31 @@
 
 
 ;; _ bypass param/value
-(def value (atom 0))
+(def a (atom {}))
 
-(add-watch value nil (fn [_ _ _ new-value]
-                       (println new-value))
+(add-watch a :watcher
+  (fn [key atom old-state new-state]
+    (prn "-- Atom Changed --")
+    (prn "key" key)
+    (prn "atom" atom)
+    (prn "old-state" old-state)
+    (prn "new-state" new-state)))
 
-(reset! value 6)
-; prints 6
-(reset! value 9)
-; prints 9
+(reset! a {:dup "bar"})
+(reset! a {:ass "bar"})
+
+
+;; The name of my account can change, and I want to update another atom accordingly.
+;; I just take the fourth argument that contains the new state and I ignore the other arguments.
+
+(let [account (atom {:name "pending"
+                     :funds 100.50
+                     :profit-loss 23.45})
+      label-account-name (atom "no-name-yet")]
+   (add-watch account :listener-one #(reset! label-account-name (:name %4)))
+   (println "Before swap:" @label-account-name)
+   (swap! account assoc :name "CFD")
+   (println "After swap:" @label-account-name))
 
 
 ;; , - Whitespace character In Clojure, , is treated as whitespace,

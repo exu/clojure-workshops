@@ -34,8 +34,6 @@
 ;; evaluated in its body. A future’s body executes only once, and its
 ;; value gets cached. Try the following:
 
-
-
 (let [result (future (Thread/sleep 3000)
                      (+ 1 1))]
   (println "The result is: " @result)

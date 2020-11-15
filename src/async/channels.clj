@@ -1,13 +1,23 @@
 (ns playsync.core
   (:require [clojure.core.async
              :as a
-             :refer [>! <! >!! <!! go chan buffer close! thread
+             :refer [>! <! >!! <!! go go-loop chan buffer close! thread
                      alts! alts!! timeout]]))
+
 
 
 (def echo-chan (chan))
 (go (println (<! echo-chan)))
-(>!! echo-chan "ketchup")
+(>!! echo-chan "hello!")
+
+
+(def loop-chan (chan))
+(go-loop []
+  (println (<! loop-chan))
+  (recur))
+
+(dotimes [n 4] (>!! loop-chan (str "ketchup" n)))
+
 
 
 (def echo-buffer (chan 2))

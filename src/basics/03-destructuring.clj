@@ -35,7 +35,3 @@
                 (clojure.string/join ", " unimportant-choices))))
 
 (chooser ["Marmalade", "Handsome Jack", "Pigpen", "Aquaman"])
-                                        ; => Your first choice is: Marmalade
-                                        ; => Your second choice is: Handsome Jack
-                                        ; => We're ignoring the rest of your choices. Here they are in case \
-you need to cry over them: Pigpen, Aquaman
