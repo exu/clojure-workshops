@@ -1,5 +1,5 @@
 ;; https://clojure.org/reference/transducers
-
+;; https://stackoverflow.com/questions/26317325/can-someone-explain-clojure-transducers-to-me-in-simple-terms
 
 ;;  reducing function is the kind of function you’d pass to reduce -
 ;;  it is a function that takes an accumulated result and a new input
