@@ -1,12 +1,14 @@
 (println "Hello")
 
 
+
 ;; Func and var
 
 (defn im-a-func [greeting]
   (println "Hello" greeting)
-  43)
+  (count greeting))
 
 (def greeting "Dupa")
 
 (im-a-func "Tralallala")
+(im-a-func greeting)
