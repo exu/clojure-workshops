@@ -52,8 +52,8 @@
 
 
 ;; println debug trick :)
-(let [user (get-user user-id)
-      _ (println user)           ; does compile
-      account (get-account user) ; this line fails
-      transaction (make-deposit account 100)]
-  (save-transaction transaction))
+;; (let [user (get-user user-id)
+;;       _ (println user)           ; does compile
+;;       account (get-account user) ; this line fails
+;;       transaction (make-deposit account 100)]
+;;   (save-transaction transaction))

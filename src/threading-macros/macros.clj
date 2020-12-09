@@ -46,9 +46,8 @@
 
 
 (as-> [1 2 3 4] v
-  (map name v)
   (second v)
-  (+ v 1 ))
+  (+ v 1))
 
 
 
@@ -56,7 +55,10 @@
   (Long/parseLong a-str))
 
 
-;; If a-map lacks the key :counter, the entire expression will evaluate to nil rather than raising an exception. In fact, this behavior is so useful that it is common to see some-> used when threading is not required:
+;; If a-map lacks the key :counter, the entire expression will
+;; evaluate to nil rather than raising an exception. In fact, this
+;; behavior is so useful that it is common to see some-> used when
+;; threading is not required:
 (let [a-map {:a 2323 :b 344 :c 1 :counter "32434"}]
   (some-> a-map :counter Long/parseLong inc))
 
@@ -66,9 +68,10 @@
     (odd? n) (conj "odd")
     (even? n) (conj "even")
     (zero? n) (conj "zero")
-    (pos? n) (conj "positive")))
+    (pos? n) (conj "positive")
+    (neg? n) (conj "negative")))
 
-
+(describe-number -1)
 (describe-number 3)
 (describe-number 4)
 

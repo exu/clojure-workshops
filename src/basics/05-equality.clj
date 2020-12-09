@@ -30,7 +30,8 @@
      (= m1 m2))
 
 
-;; Any metadata associated with Clojure collections is ignored when comparing them.
+;; Any metadata associated with Clojure collections is ignored when
+;; comparing them.
 (def s1 (with-meta #{1 2 3} {:key1 "set 1"}))
 (def s2 (with-meta #{1 2 3} {:key1 "set 2 here"}))
 (binding [*print-meta* true] (pr-str s1))
@@ -40,6 +41,7 @@
 
 (defrecord MyRec1 [a b])
 (def r1 (->MyRec1 1 2))
+(def r3 (->MyRec1 1 2))
 r1
 (defrecord MyRec2 [a b])
 (def r2 (->MyRec2 1 2))
@@ -47,6 +49,8 @@ r2
 (def m1 {:a 1 :b 2})
 (= r1 r2)
 (= r1 m1)
+(= r3 r1)
+
 (into {} r1)
 (= (into {} r1) m1)
 

@@ -32,6 +32,7 @@ for more details https://github.com/technomancy/leiningen/blob/stable/doc/TUTORI
 
 - https://www.braveclojure.com/ (this is great one)
 - https://purelyfunctional.tv/mini-guide/
+- https://clojureverse.org/
 
 ### Libs
 
@@ -42,7 +43,7 @@ for more details https://github.com/technomancy/leiningen/blob/stable/doc/TUTORI
 - Ring https://github.com/ring-clojure/ring
 - Reitit https://cljdoc.org/d/metosin/reitit/0.5.10/doc/introduction
          https://cljdoc.org/d/metosin/reitit/0.5.10/doc/misc/performance
-     - Luminus https://luminusweb.com/
+- Luminus https://luminusweb.com/
 - https://github.com/metosin/pohjavirta (undertow wrapper)
 
 #### DB

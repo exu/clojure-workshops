@@ -60,7 +60,6 @@
  ::my-keyword
 
 
-
 ;; #: and #:: - Namespace Map Syntax Namespace map syntax was added in
 ;; Clojure 1.9 and is used to specify a default namespace context when
 ;; keys or symbols in a map where they share a common namespace.  The

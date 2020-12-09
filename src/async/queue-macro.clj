@@ -3,6 +3,11 @@
   [timeout & body]
   `(do (Thread/sleep ~timeout) ~@body))
 
+(wait 1000
+      (print "dsjkdjaskdja")
+      (println "lampa")
+      (println "lampa"))
+
 
 
 (let [saying3 (promise)]

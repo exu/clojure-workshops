@@ -19,6 +19,8 @@
   []
   (format-quote (slurp "https://www.braveclojure.com/random-quote")))
 
+
+
 (defn snag-quotes
   [filename num-quotes]
   (let [c (chan)]

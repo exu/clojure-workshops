@@ -96,7 +96,7 @@
 (fnext [1 2 3 4]) ; Same as (first (next x))
 (nnext [1 2 3 4]) ; Same as (next (next x))
 (drop 2 [1 2 3 4])
-(drop-while odd? [1 2 3 4]) ;; ???
+(drop-while odd? [1 1 1 1 1 1 1 1 1 1 1 2 3 4]) ;; ???
 
 ;; Seq with tail-items missing: `take` `take-nth` `take-while` `butlast` `drop-last` `for`
 (take 2 [1 2 3 4])
@@ -114,14 +114,18 @@
 (sort-by first [[1 3] [2 8] [3 2]])
 (sort-by last [[1 3] [2 8] [3 2]])
 (sort-by :rank [{:rank 2} {:rank 3} {:rank 1}])
-(sort-by (juxt :foo :bar) [{:foo 2 :bar 11} {:bar 99 :foo 1} {:bar 55 :foo 2} {:foo 1 :bar 77}]) ; ;sort by :foo, and where :foo is equal, sort by :bar
+(sort-by (juxt :foo :bar)
+         [{:foo 2 :bar 11}
+          {:bar 99 :foo 1}
+          {:bar 55 :foo 2}
+          {:foo 1 :bar 77}]) ; ;sort by :foo, and where :foo is equal, sort by :bar
 (sort-by val > {:foo 7, :bar 3, :baz 5})
 (sort-by (comp count key) {"aaa" 7, "n" 3, "bbbbbb" 5})
 (shuffle [1 2 3 4 5 6 7 8 9 0])
 
 ;; Create nested seqs: `split-at` `split-with` `partition` `partition-all` `partition-by`
 (split-at 2 [1 2 3 4 5])
-(split-with (partial > 3) [1 2 3 4 5])
+(split-with #(> 4 %) [1 2 3 4 5])
 (partition 2 [1 2 3 4 5])
 (partition-all 2 [1 2 3 4 5])
 (partition-by :rank [{:rank 2} {:rank 3} {:rank 1 :name "aaa"} {:rank 1 :name "dupa"}])
@@ -135,14 +139,17 @@
 (map #(slurp %) uris)
 (pmap #(slurp %) uris)
 
-(replace {2 10, 5 50} [1 2 3 4 5])
-(reductions + [1 1 1 1])
+(replace {2 10, 5 50} [1 2 3 4 5 5 5 5 3 3 3 22 2 2 2 ])
+(reductions + [1 1 4 1])
+(reduce + [1 1 4 1])
 ;; This is just like reduce except that the calculation is collected during the reduce.
 (= (reduce + [1 2 3])
    (last (reductions + [1 2 3])))
 (reductions conj [] '(1 2 3))
 (reductions (fn [sum num] (+ sum num)) 100 [1 2 3 4 5])
-(map-indexed (fn [key val] {:key key :val val :length (count val)}) ["aa" "b" "ccc" "dedede"])
+(map-indexed
+ (fn [key val] {:key key :val val :length (count val)})
+ ["aa" "b" "ccc" "dedede"])
 
 ;; Using a seq
 ;; Extract a specific-numbered item from a seq: `first` `ffirst` `nfirst` `second` `nth` `when-first` `last` `rand-nth`
@@ -163,7 +170,7 @@
 ;; Compute a boolean from a seq: `not-empty` `some` `reduce` `seq?`
 ;; `every?` `not-every?` `not-any?` `empty?`
 (not-empty [])
-(some even? [1 5 3])
+(some even? [1 5 3 3])
 (seq? (range 10))
 (seq? [1 2 23])
 (every? even? [2 4 6])

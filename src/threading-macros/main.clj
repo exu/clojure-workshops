@@ -1,10 +1,14 @@
 (->
  2
- (+ 3)
- (- 12)
- (* 5))
+ (+ ,,, 3)
+ (- ,,, 12)
+ (* ,,, 5))
 
-
+(->>
+ 2
+ (+ 3 ,,,)
+ (- 12 ,,,)
+ (* 5 ,,,))
 
 
 ;; I did not fully get what -> (thrush or thread) did until I visualized it like this:

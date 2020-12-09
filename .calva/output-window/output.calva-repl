@@ -4,15 +4,7 @@
 ; Please see https://calva.io/output/ for more info.
 ; Happy coding! ♥️
 
-; Connecting ...
-#function[clojure.core/take/fn--5905]
-clj::user=> 
-#function[clojure.core/map/fn--5862]
-clj::user=> 
-#function[clojure.core/filter/fn--5889]
-clj::user=> 
-(2 4 46 66 8)
-clj::user=> 
+; Jacking in...
 ; Hooking up nREPL sessions...
 ; Connected session: clj
 ; TIPS: 
@@ -22,4 +14,124 @@ clj::user=>
 ;   - `alt+up` and `alt+down` traverse up and down the REPL command history
 ;      when the cursor is after the last contents at the prompt
 ;   - Clojure lines in stack traces are peekable and clickable.
-clj::example-1.core=> 
+clj::example-1.core=>
+
+; Jack-in done.
+clj::example-1.core=>
+Hello
+nil
+clj::user=>
+Hello
+nil
+clj::user=>
+Hello
+nil
+clj::user=>
+Hello
+nil
+clj::user=>
+Hello
+nil
+clj::user=>
+Hello
+nil
+clj::user=>
+Hello
+nil
+clj::user=>
+Hello
+nil
+clj::user=>
+; Syntax error compiling at (src/basics/01-hello.clj:14:1).
+; Unable to resolve symbol: im-a-func in this context
+clojure.lang.Compiler/analyze (Compiler.java:6808)
+clojure.lang.Compiler$InvokeExpr/parse (Compiler.java:3820)
+clojure.lang.Compiler/analyzeSeq (Compiler.java:7109)
+clojure.lang.Compiler/analyze (Compiler.java:6789)
+clojure.lang.Compiler$BodyExpr$Parser/parse (Compiler.java:6120)
+clojure.lang.Compiler$FnMethod/parse (Compiler.java:5467)
+clojure.lang.Compiler$FnExpr/parse (Compiler.java:4029)
+clojure.lang.Compiler/analyzeSeq (Compiler.java:7105)
+clojure.lang.Compiler/analyze (Compiler.java:6789)
+clojure.lang.Compiler/eval (Compiler.java:7174)
+clojure.core/eval (core.clj:3214)
+clojure.core/eval (core.clj:3210)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.core/apply (core.clj:665)
+clojure.core/with-bindings* (core.clj:1973)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.main/repl (main.clj:437)
+clojure.main/repl (main.clj:458)
+clojure.main/repl (main.clj:368)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:152)
+nrepl.middleware.session/session-exec (session.clj:202)
+nrepl.middleware.session/session-exec (session.clj:201)
+java.lang.Thread/run (Thread.java:834)
+clj::user=>
+Hello
+nil
+clj::user=>
+Hello
+nil
+clj::user=>
+Hello
+nil
+clj::user=>
+Hello
+nil
+clj::user=>
+nil
+clj::user=>
+Hello
+nil
+clj::user=>
+Hello
+nil
+clj::user=>
+Hello
+nil
+clj::user=>
+Hello
+nil
+clj::user=>
+; Syntax error compiling at (src/basics/01-hello.clj:14:1).
+; Unable to resolve symbol: im-a-func in this context
+clojure.lang.Compiler/analyze (Compiler.java:6808)
+clojure.lang.Compiler$InvokeExpr/parse (Compiler.java:3820)
+clojure.lang.Compiler/analyzeSeq (Compiler.java:7109)
+clojure.lang.Compiler/analyze (Compiler.java:6789)
+clojure.lang.Compiler$BodyExpr$Parser/parse (Compiler.java:6120)
+clojure.lang.Compiler$FnMethod/parse (Compiler.java:5467)
+clojure.lang.Compiler$FnExpr/parse (Compiler.java:4029)
+clojure.lang.Compiler/analyzeSeq (Compiler.java:7105)
+clojure.lang.Compiler/analyze (Compiler.java:6789)
+clojure.lang.Compiler/eval (Compiler.java:7174)
+clojure.core/eval (core.clj:3214)
+clojure.core/eval (core.clj:3210)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.core/apply (core.clj:665)
+clojure.core/with-bindings* (core.clj:1973)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:87)
+clojure.main/repl (main.clj:437)
+clojure.main/repl (main.clj:458)
+clojure.main/repl (main.clj:368)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:152)
+nrepl.middleware.session/session-exec (session.clj:202)
+nrepl.middleware.session/session-exec (session.clj:201)
+java.lang.Thread/run (Thread.java:834)
+clj::user=>
+olleh
+nil
+clj::user=>
+olleh
+nil
+clj::user=>
+#'user/my-first
+clj::user=>
+(bike war-axe)
+"oven"
+clj::user=>

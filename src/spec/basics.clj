@@ -1,6 +1,6 @@
 (require '[clojure.spec.alpha :as s])
 
-(s/conform even? 1000)
+(s/conform even? 101)
 (s/conform odd? 1000)
 (s/valid? even? 10)
 (s/valid? odd? 10)

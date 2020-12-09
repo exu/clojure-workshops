@@ -1,7 +1,7 @@
 (def my-vector [123 234 345 456 567])
 
 (let [[a b c d e] my-vector]
-  (println (str a ", " b ", " c ", " d ", " e)))
+  (println (str "a:",  a ", b:" b ", c:" c ", d:" d ", e:" e)))
 
 (def my-map {:a 123 :b 234 :c 345 :d 456 :e 567})
 

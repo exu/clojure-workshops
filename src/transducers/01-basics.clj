@@ -15,7 +15,11 @@
 ;; (whatever, input -> whatever) -> (whatever, input -> whatever)
 
 
-;; Most sequence functions included in Clojure have an arity that produces a transducer. This arity omits the input collection; the inputs will be supplied by the process applying the transducer. Note: this reduced arity is not currying or partial application.
+;; Most sequence functions included in Clojure have an arity that
+;; produces a transducer. This arity omits the input collection; the
+;; inputs will be supplied by the process applying the
+;; transducer. Note: this reduced arity is not currying or partial
+;; application.
 
 (filter odd?) ;; returns a transducer that filters odd
 (map inc)     ;; returns a mapping transducer for incrementing

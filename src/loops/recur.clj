@@ -24,12 +24,3 @@
 
 
 (some-join ["hello" "world" "love" "coding"] "Words: ")
-
-(print "Dupa")
-
-
-(require '[clojure.string :as s])
-
-(s/trim " akjsdlksajkdjsa d ")
-(s/includes? "asdkdjsakd ksajkdsakjd s" "ksa")
-(is true :true)

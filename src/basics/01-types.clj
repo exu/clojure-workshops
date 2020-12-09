@@ -18,7 +18,6 @@
 (/ 2 3)
 (/ 2.0 3)
 (map #(Math/abs %) (range -3 3))
-(3 2 1 0 1 2)
 (class 36786883868216818816N)
 (class 3.14159265358M)
 
@@ -29,7 +28,6 @@
 
 ;; CHARACTERS - same as Java
 (def some-char \A)
-
 
 ;; SYMBOLS Symbols are identifiers that are normally used to refer to
 ;; something else. They can be used in program forms to refer to
@@ -74,7 +72,6 @@
 
 
 
-
 ;; VECTOR - A Vector is a collection of values indexed by contiguous
 ;; integers. Vectors support access to items by index in log32N
 ;; hops. count is O(1).
@@ -84,7 +81,6 @@
 ;; which they presume is an index and look up in themselves as if by
 ;; nth, i.e. vectors are functions of their indices. Vectors are
 ;; compared first by length, then each element is compared in order.
-
 (def some-vector [1 2 3 4 5])
 
 ;; SETS
@@ -102,6 +98,7 @@
 
 (disj s :d)
 (contains? s :b)
+
 
 (get s :a)
 ;; sets are functions of their members
@@ -125,7 +122,7 @@
 ;; invoke() of one argument (a key) with an optional second
 ;; argument (a default value), i.e. maps are functions of their
 ;; keys. nil keys and values are ok.
-(def some-map {:dupa "lamapa", 1 23232, "key" "value"})
+(def some-map {:dupa "lamapa" 1 23232 "key" "value"})
 
 ;; , is like whitespace in clojure
 (def scores {:Daras  1400
@@ -178,6 +175,8 @@
 ;; building map spoiler! out of scope
 (def players #{"Alice" "Bob" "Kelly"})
 (zipmap players (range 1 4))
+(zipmap [:a :b :c] [1 2 3])
+
 (into {} (map (fn [player] [player 0]) players))
 (reduce (fn [m player]
           (assoc m player 0))

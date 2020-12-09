@@ -26,7 +26,7 @@
 (cl-format nil "~b" 10) ;; "1010" ;
 (cl-format nil "Anno Domini ~@r" 25) ;; "Anno Domini XXV" ;
 
-(cl-format nil "~r" 158) ;; "one hundred fifty-eight" ;
+(cl-format nil "~r" 15883293982392839829929283892839328) ;; "one hundred fifty-eight" ;
 (cl-format nil "~:r and ~:r" 1 2) ;; "first and second" ;
 (cl-format nil "~r banana~:p" 1) ;; "one banana"
 (cl-format nil "~r banana~:p" 2) ;; "two bananas" ;

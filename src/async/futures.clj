@@ -25,6 +25,7 @@
 (let [result (future (println "this prints once")
                      (Thread/sleep 1000)
                      (+ 1 1))]
+  (println "before: ")
   (println "deref: " (deref result))
   (println "@: " @result))
 

@@ -50,6 +50,7 @@
             [yak-butter-international butter-than-nothing baby-got-yak]))
 
 
+
 ;; Here I’ve used comp to compose functions, and I’ve used time to
 ;; print the time taken to evaluate a form. You can use a promise and
 ;; futures to perform each check on a separate thread. If your
@@ -65,7 +66,6 @@
                (do
                  (println "Delivering" butter)
                  (deliver butter-promise satisfactory-butter)))))
-
    (println "And the winner is:" @butter-promise)))
 
 ;; promise can get only one result here we got 2 objects which

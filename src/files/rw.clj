@@ -1,5 +1,5 @@
 ;; pluj :D
-(spit "/tmp/test.txt" (repeat 3 "Look, I can write a file!")) ;
+(spit "/tmp/test.txt" (reduce str (repeat 3 "Look, I can write a file!"))) ;
 
 (map #(str "aaa" %) (slurp "/tmp/test.txt"))
 ;
@@ -61,7 +61,7 @@
 
 (reader (file "/tmp/test.txt"))
 ;; or
-(writer (file "tmp/test.txt"))
+(writer (file "/tmp/test.txt"))
 ;; The file function is also in clojure.java.io.
 
 ;; PS2: Sometimes it's handy to be able to see what the current directory (so ".") is. You can get the absolute path in two ways:

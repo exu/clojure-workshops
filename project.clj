@@ -7,6 +7,7 @@
                  [org.clojure/core.async "1.3.610"]
                  [http-kit "2.4.0"]
                  [compojure "1.6.2"]
+                 [clj-http "3.11.0"]
                  [ring/ring-json "0.5.0"]]
   :main ^:skip-aot example-1.core
   :target-path "target/%s"
